@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{sn_document_head}
+</head>
+
+<body id="{exp:stash:get name='bodyId'}">
+
+{sn_header}
+
+<div class="wrapper group">
+
+<section role="main">
+{exp:stash:get name="mainContent"}
+{exp:stash:get name="pagination"}
+</section><!-- END role="main" -->
+
+{sn_aside}
+
+</div><!-- END .wrapper -->
+
+{sn_footer}
+
+</body>
+<html>

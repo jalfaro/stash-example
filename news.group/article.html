@@ -1,0 +1,25 @@
+{embed="_wrappers/_main"}
+{exp:stash:set name='bodyId'}{segment_1}{/exp:stash:set}
+
+{exp:stash:set name="mainContent"}
+{exp:channel:entries channel="news_articles" disable="{gv_disable}"}
+<article id="singlePost">
+
+<h2>{title}</h2>
+
+{if subtitle}
+<h3>{subtitle}</h3>
+{/if}
+
+{exp:antenna url='{video}' max_width="469" max_height="264"}
+{if embed_code}
+{embed_code}
+{/if}
+{/exp:antenna}
+
+{body}
+
+</article><!-- END #singlePost -->
+{/exp:channel:entries}
+{sn_comments}
+{/exp:stash:set}
