@@ -60,7 +60,7 @@ The news index page is visited, the EE parser runs through the template code and
  * one to get the mainContent - {exp:stash:get name="mainContent"}
  * one to get the pagination - {exp:stash:get name="pagination"}
 
-  and spits out the html to the page, simple right? Well that's my understanding of how things work, I am sure there are far better technical descriptions of what actually happens but hopefully that all makes sense. The single article page works much in the same way except as it is calling the same _main wrapper template it doesn't show the pagination because it is not required and that is why I wrapped it in a conditional.
+and spits out the html to the page, simple right? Well that's my understanding of how things work, I am sure there are far better technical descriptions of what actually happens but hopefully that all makes sense. The single article page works much in the same way except as it is calling the same _main wrapper template it doesn't show the pagination because it is not required and that is why I wrapped it in a conditional.
   
 ##Going Forward
 There are so many more clever things you can do with stash and once you have the basics down it's easy to start copying out the method above for all your other site pages. I hope this has given a short insight into how I found working with Stash for the first time and please feel free to make comment/suggestions either on [github](https://github.com/expressionengine/stash-example) or in the comments on [my site](). 
