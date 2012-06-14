@@ -12,7 +12,9 @@
 
 <section role="main">
 {exp:stash:get name="mainContent"}
+{if segment_2 == ""}
 {exp:stash:get name="pagination"}
+{/if}
 </section><!-- END role="main" -->
 
 {sn_aside}
