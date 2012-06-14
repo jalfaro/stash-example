@@ -27,7 +27,7 @@ You will notice there are three Stash variables within this template, these are 
 
 The first part of the file (line 1) embeds the wrapper template using a standard embed, this is the main structure and markup for the page and could actually be placed anywhere in the template, I think it makes sense to store this at the top of the file:
 
-  {embed="_wrappers/_main"}
+	{embed="_wrappers/_main"}
 
 Next (line 2) comes the first Stash variable which sets the body id to whatever segment_1 in the url is (in this case it would be news as it is my template group name):
 
@@ -41,7 +41,7 @@ the name I have given to this variable is "mainContent" but it could be anything
 That's it for the single article page, its as easy as that.
 
 ####[News Index Page](https://github.com/expressionengine/stash-example/blob/master/news.group/index.html)
-The second page we need to run through is the news index page which will show 5 articles then use pagination to display the rest.
+The second page we need to run through is the [news index page](https://github.com/expressionengine/stash-example/blob/master/news.group/index.html) which will show 5 articles then use pagination to display the rest.
 
 ![News Index Page](file://localhost/tmp/stash-example_news.group_index.html%20at%20master%20%C2%B7%20expressionengine_stash-example%20%C2%B7%20GitHub.jpg)
 
@@ -63,5 +63,5 @@ The news index page is visited, the EE parser runs through the template code and
 and spits out the html to the page, simple right? Well that's my understanding of how things work, I am sure there are far better technical descriptions of what actually happens but hopefully that all makes sense. The single article page works much in the same way except as it is calling the same _main wrapper template it doesn't show the pagination because it is not required and that is why I wrapped it in a conditional.
   
 ##Going Forward
-There are so many more clever things you can do with stash and once you have the basics down it's easy to start copying out the method above for all your other site pages. I hope this has given a short insight into how I found working with Stash for the first time and please feel free to make comment/suggestions either on [github](https://github.com/expressionengine/stash-example) or in the comments on [my site](http://garethredfern.com). 
+There are so many more clever things you can do with stash and once you have the basics down it's easy to start copying out the method above for all your other site pages. I hope this has given a short insight into how I found working with Stash for the first time and please feel free to make comment/suggestions either on [github](https://github.com/expressionengine/stash-example) or in the comments on [my site](). 
 
