@@ -23,6 +23,8 @@ Template partials are the main content which will change from page to page, the 
 ####[Single Article Template](https://github.com/expressionengine/stash-example/blob/master/news.group/article.html)
 You will notice there are three Stash variables within this template, these are the variables which pull in the content which is specific to that page. They add in the id for the body tag, the main content, and the pagination for the news articles (I'll explain this later on).  Lets run through the [single article template](https://github.com/expressionengine/stash-example/blob/master/news.group/article.html) from top to bottom.
 
+![Single Article Template](http://images.garethredfern.com/articles/stash-example-article.jpg)
+
 The first part of the file (line 1) embeds the wrapper template using a standard embed, this is the main structure and markup for the page and could actually be placed anywhere in the template, I think it makes sense to store this at the top of the file:
 
 	{embed="_wrappers/_main"}
@@ -40,6 +42,8 @@ That's it for the single article page, its as easy as that.
 
 ####[News Index Page](https://github.com/expressionengine/stash-example/blob/master/news.group/index.html)
 The second page we need to run through is the [news index page](https://github.com/expressionengine/stash-example/blob/master/news.group/index.html) which will show 5 articles then use pagination to display the rest.
+
+![News Index Page](http://images.garethredfern.com/articles/stash-example-news-index.jpg)
 
 The first two lines do exactly the same as the single article template and we also use a channel entries tag to display 5 entries followed by outputting the pagination. You will notice that the articles are output using an ordered list and because your pagination variables need to be inside the channel entries tag this means that I have an ordered list with a div at the end containing the pagination. This has always bugged me as it is not valid markup, you can not embed a div in a ul or ol unless its within a set of li tags and strictly speaking the pagination is not part of the list. Do not fear though Stash comes to our rescue.
 
