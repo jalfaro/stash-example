@@ -23,8 +23,6 @@ Template partials are the main content which will change from page to page, the 
 ####[Single Article Template][]
 You will notice there are three Stash variables within this template, these are the variables which pull in the content specific to that page. They add in the id for the body tag, the main content, and the pagination for the news articles (I'll explain this later on).  Lets run through the [single article template][] from top to bottom.
 
-![The Single Article Template][]
-
 The first part of the file (line 1) embeds the wrapper template using a standard embed, this is the main structure and markup for the page and could actually be placed anywhere in the template, I think it makes sense to store this at the top of the file:
 
 	{embed="_wrappers/_main"}
@@ -42,8 +40,6 @@ That's it for the single article page, its as easy as that.
 
 ####[News Index Page][]
 The second page we need to run through is the [news index page][] which will show 5 articles then use pagination to display the rest.
-
-![The News Index Page][]
 
 The first two lines do exactly the same as the single article template and we also use a channel entries tag to display 5 entries followed by outputting the pagination. You will notice that the articles are output using an ordered list. The pagination variables need to be inside the channel entries tag, this means that I have an ordered list with a div at the end containing the pagination. This has always bugged me, as it is not valid markup, you can not embed a div in a ul or ol unless its within a set of li tags and strictly speaking the pagination is not part of the list. Do not fear though Stash comes to our rescue.
 
